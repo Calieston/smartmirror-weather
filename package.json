@@ -1,0 +1,13 @@
+{
+  "name": "weathermodule",
+  "version": "1.0.0",
+  "description": "This is a weather module",
+  "author": "Calieston",
+  "homepage": "https://github.com/Calieston/weatherModule.git",
+  "smartmirror": {
+    "url": {
+      "type": "string",
+      "descr": "URL to openweather API"
+    }
+  }
+}
