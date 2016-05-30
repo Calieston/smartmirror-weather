@@ -10,16 +10,18 @@ app.set('view engine', 'jade');
 
 app.get('/', function (req, res) {
   let city = 'Stuttgart'
-  controller.get({city: city})
-  .then((id) => {
-    console.log(id);
+  let urlStart='http://api.openweathermap.org/data/2.5/weather?q='
+  let urlEnd='&lang=de&units=metric&APPID=384c499db848052e6aeed5df1388d5e7'
+  controller.get({city: city, urlStart: urlStart, urlEnd: urlEnd })
+  .then((weatherData) => {
+    console.log(weatherData);
     res.render('app/view.jade', {
-      title: 'Weather Module',
-      /*weatherData:*/ /*weatherData*/
+      title: 'Weather Information',
+      weatherData: weatherData
     });
   });
 });
 
 app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+  console.log('App listening on port 8080!');
 });

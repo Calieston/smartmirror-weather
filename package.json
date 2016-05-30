@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Calieston/smartmirror-weather.git"
+  },
   "keywords": [
     "smartmirror",
     "weather",
@@ -19,9 +23,17 @@
   },
   "homepage": "https://github.com/Calieston/weatherModule.git",
   "smartmirror": {
-    "url": {
+    "city": {
       "type": "string",
-      "descr": "URL to openweather API"
-    }
+      "descr": "City to which you want to know the weather"
+    },
+    "urlStart": {
+      "type": "string",
+      "descr": "First part of request URL for a weather api"
+    },
+    "urlEnd": {
+      "type": "string",
+      "descr": "Second part of request URL for a weather api"
+    },
   }
 }

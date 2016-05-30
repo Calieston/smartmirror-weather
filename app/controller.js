@@ -4,19 +4,20 @@ exports.get = function(params) {
   // Return new Promise
   return new Promise((resolve, reject) => {
 
-    const city = params.city;
+    let city = params.city;
+    let urlStart = params.urlStart;
+    let urlEnd = params.urlEnd;
 
     // Select http or https module, depending on reqested url
-    const urlStart = 'http://api.openweathermap.org/data/2.5/weather?q=';
-    const urlEnd = '&lang=de&units=metric&APPID=384c499db848052e6aeed5df1388d5e7';
+    const lib = urlStart.startsWith('https') ? require('https') : require('http');
 
     // Fire the get request
     const request = lib.get(urlStart + city + urlEnd, (response) => {
+
       // Handle http errors
       if (response.statusCode < 200 || response.statusCode > 299) {
         reject(new Error('Failed to load weather data, status code: ' + response.statusCode));
       }
-
       // Temporary data holder
       const body = [];
 
@@ -27,7 +28,7 @@ exports.get = function(params) {
 
       // We are done, resolve promise with those joined chunks
       response.on('end', () => {
-        resolve(JSON.stringify(body.join('')).responseData);
+        resolve(JSON.parse(body.join('')));
       });
     });
 

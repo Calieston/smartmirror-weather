@@ -6,7 +6,9 @@ html
   body
     section
       header
-        h1=weatherData.name
-          header
-            p=weatherData.weather.description
-            p=weatherData.main.temp °C
+        if weatherData
+          h1=weatherData.name
+          h3=Math.round(weatherData.main.temp) +' °C'
+          h3=weatherData.weather['0'].description
+        else
+          h1='Keine Wetterdaten vorhanden'
