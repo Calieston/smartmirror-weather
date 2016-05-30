@@ -14,7 +14,6 @@ app.get('/', function (req, res) {
   let urlEnd='&lang=de&units=metric&APPID=384c499db848052e6aeed5df1388d5e7'
   controller.get({city: city, urlStart: urlStart, urlEnd: urlEnd })
   .then((weatherData) => {
-    console.log(weatherData);
     res.render('app/view.jade', {
       title: 'Weather Information',
       weatherData: weatherData
