@@ -1,1 +1,12 @@
-t
+doctype html
+html
+  head
+    title=title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    section
+      header
+        h1=weatherData.name
+          header
+            p=weatherData.weather.description
+            p=weatherData.main.temp °C

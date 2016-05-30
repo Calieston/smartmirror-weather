@@ -1,1 +1,1 @@
-# weatherModule
+# Weather module for smart mirror.
