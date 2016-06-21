@@ -1,14 +1,6 @@
-doctype html
-html
-  head
-    title=title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    section
-      header
-        if weatherData
-          h1=weatherData.name
-          h3=Math.round(weatherData.main.temp) +' °C'
-          h3=weatherData.weather['0'].description
-        else
-          h1='Keine Wetterdaten vorhanden'
+if data
+  h1=data.name
+  h3=Math.round(data.main.temp) +' °C'
+  h3=data.weather['0'].description
+else
+  h1='Keine Wetterdaten vorhanden'

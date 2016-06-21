@@ -23,17 +23,20 @@
   },
   "homepage": "https://github.com/Calieston/weatherModule.git",
   "smartmirror": {
-    "city": {
-      "type": "string",
-      "descr": "City to which you want to know the weather"
+    "settings": {
+      "city": {
+        "type": "string",
+        "descr": "City to which you want to know the weather"
+      },
+      "urlStart": {
+        "type": "string",
+        "descr": "First part of request URL for a weather api"
+      },
+      "urlEnd": {
+        "type": "string",
+        "descr": "Second part of request URL for a weather api"
+      }
     },
-    "urlStart": {
-      "type": "string",
-      "descr": "First part of request URL for a weather api"
-    },
-    "urlEnd": {
-      "type": "string",
-      "descr": "Second part of request URL for a weather api"
-    },
+    "size": ["4x2"]
   }
 }
