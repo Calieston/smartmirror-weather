@@ -17,7 +17,7 @@
   ],
   "author": "Calieston Varatharajah",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "express": "^4.13.4",
     "jade": "^1.11.0"
   },
@@ -26,15 +26,15 @@
     "settings": {
       "city": {
         "type": "string",
-        "descr": "City to which you want to know the weather"
+        "desc": "City to which you want to know the weather"
       },
       "urlStart": {
         "type": "string",
-        "descr": "First part of request URL for a weather api"
+        "desc": "First part of request URL for a weather api"
       },
       "urlEnd": {
         "type": "string",
-        "descr": "Second part of request URL for a weather api"
+        "desc": "Second part of request URL for a weather api"
       }
     },
     "size": ["4x2"]
