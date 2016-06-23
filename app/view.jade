@@ -1,6 +1,6 @@
 if data
-  h1=data.name
-  h3=Math.round(data.main.temp) +' °C'
+  h1=Math.round(data.main.temp) +' °C'
+  h3=data.name
   h3=data.weather['0'].description
 else
   h1='Keine Wetterdaten vorhanden'

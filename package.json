@@ -27,14 +27,6 @@
       "city": {
         "type": "string",
         "desc": "City to which you want to know the weather"
-      },
-      "urlStart": {
-        "type": "string",
-        "desc": "First part of request URL for a weather api"
-      },
-      "urlEnd": {
-        "type": "string",
-        "desc": "Second part of request URL for a weather api"
       }
     },
     "size": ["4x2"]

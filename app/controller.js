@@ -5,8 +5,8 @@ exports.get = function(params) {
   return new Promise((resolve, reject) => {
 
     let city = params.city;
-    let urlStart = params.urlStart;
-    let urlEnd = params.urlEnd;
+    let urlStart = 'http://api.openweathermap.org/data/2.5/weather?q=';
+    let urlEnd = '&lang=de&units=metric&APPID=384c499db848052e6aeed5df1388d5e7';
 
     // Select http or https module, depending on reqested url
     const lib = urlStart.startsWith('https') ? require('https') : require('http');
