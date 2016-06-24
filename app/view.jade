@@ -1,4 +1,6 @@
+link(rel='stylesheet', href='stylesheets/weather-icons.min.css')
 if data
+  i(class="wi wi-owm-#{data.weather['0'].id} wi-flip-vertical")
   h1=Math.round(data.main.temp) +' °C'
   h3=data.name
   h3=data.weather['0'].description

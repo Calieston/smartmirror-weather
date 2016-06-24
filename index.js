@@ -3,6 +3,9 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 var controller = require('./app/controller');
 
