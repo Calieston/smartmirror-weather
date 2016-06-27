@@ -13,7 +13,6 @@ exports.get = function(params) {
 
     // Fire the get request
     const request = lib.get(urlStart + city + urlEnd, (response) => {
-
       // Handle http errors
       if (response.statusCode < 200 || response.statusCode > 299) {
         reject(new Error('Failed to load weather data, status code: ' + response.statusCode));
@@ -34,6 +33,7 @@ exports.get = function(params) {
 
     // Handle connection errors of the request
     request.on('error', (err) => {
+      console.log(err);
       reject(err);
     });
   });
