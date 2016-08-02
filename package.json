@@ -29,6 +29,7 @@
         "desc": "City to which you want to know the weather"
       }
     },
-    "size": ["4x2"]
+    "size": ["4x2"],
+    "gesture": false,
   }
 }
