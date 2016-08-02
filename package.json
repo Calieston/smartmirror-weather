@@ -30,6 +30,6 @@
       }
     },
     "size": ["4x2"],
-    "gesture": false,
+    "gestureSupport": true,
   }
 }
